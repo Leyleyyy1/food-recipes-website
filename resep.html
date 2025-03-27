@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Resep</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2 class="logo">Detail Resep</h2>
+    </div>
+
+    <div class="container">
+        <div id="recipeDetail" class="recipe-detail"></div>
+    </div>
+
+    
+
+    <script src="resep.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const title = params.get("title");
+
+            fetch("dataresep.json")
+                .then(response => response.json())
+                .then(data => {
+                    const recipe = data.find(r => r.Title === title);
+                    if (recipe) {
+                        document.getElementById("recipeDetail").innerHTML = `
+                            <h2>${recipe.Title}</h2>
+                            <h3>Bahan-bahan:</h3>
+                            <p>${recipe.Ingredients.replace(/--/g, "<br>")}</p>
+                            <h3>Langkah-langkah:</h3>
+                            <p>${recipe.Steps.replace(/--/g, "<br>")}</p>
+                        `;
+                    } else {
+                        document.getElementById("recipeDetail").innerHTML = "<p>Resep tidak ditemukan.</p>";
+                    }
+                })
+                .catch(error => console.error("Error fetching recipe data:", error));
+        });
+    </script>
+</body>
+</html>
