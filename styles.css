@@ -90,6 +90,7 @@ body {
     box-shadow: 0px 6px 20px rgba(255, 102, 0, 0.5);
 }
 
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -124,7 +125,6 @@ body1 {
 }
 
 
-
 .navbar {
     position: fixed;
     top: 0;
@@ -137,6 +137,7 @@ body1 {
     color: white;
     z-index: 1000;
 }
+
 
 .logo a {
     color: rgb(255, 255, 255);
@@ -167,6 +168,7 @@ body1 {
 }
 
 .results-container {
+    margin-top: 700px;
     padding: 80px 20px;
     width: 100%;
     display: flex;
@@ -176,6 +178,7 @@ body1 {
 }
 
 .grid-container {
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -184,6 +187,7 @@ body1 {
 }
 
 .recipe-card {
+    
     background: white;
     padding: 15px;
     display: flex;
@@ -209,7 +213,7 @@ body1 {
 }
 
 .recipe-card button {
-    background-color: #ff6600;
+    background-color: #ac7149;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -220,6 +224,7 @@ body1 {
 
 
 .recipe-detail {
+
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -233,23 +238,10 @@ body1 {
 }
 
 .recipe-detail h2 {
-    font-size: 28px;
+    padding-top: 50px;
+    font-size: 20px;
     color: #333;
     margin-bottom: 15px;
-}
-
-.recipe-image1 {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
-    border-radius: 10px;
-    background-color: #f8f8f8;
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    display: block;
-    margin: 0 auto 20px; 
 }
 
 
@@ -263,14 +255,14 @@ body1 {
 }
 
 .recipe-detail h3 {
-    font-size: 22px;
-    color: #ff4d00;
-    margin-top: 20px;
+    font-size: 15px;
+    color: #772b0a;
+    margin-top: 10px;
     text-align: left;
 }
 
 .recipe-detail p {
-    font-size: 18px;
+    font-size: 10px;
     color: #555;
     line-height: 1.6;
     text-align: left;
